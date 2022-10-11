@@ -1,5 +1,6 @@
 package com.example.giuaky;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +8,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 /**
@@ -61,7 +63,38 @@ public class SettingFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_setting, container, false);
-
+        ImageButton btnprofile = (ImageButton) view.findViewById(R.id.imb1);
+        ImageButton btnlist = (ImageButton) view.findViewById(R.id.imb2);
+        ImageButton btnlogin = (ImageButton) view.findViewById(R.id.imb3);
+        ImageButton btnlogout = (ImageButton) view.findViewById(R.id.imb4);
+        btnprofile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ProfileFragment.class);
+                startActivity(intent);
+            }
+        });
+        btnlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),ListFragment.class);
+                startActivity(intent);
+            }
+        });
+        btnlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),signup.class);
+                startActivity(intent);
+            }
+        });
+        btnlogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(),MainActivity.class);
+                startActivity(intent);
+            }
+        });
         return view;
     }
 }
