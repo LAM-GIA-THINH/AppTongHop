@@ -77,22 +77,22 @@ public class SettingFragment extends Fragment {
         btnlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),ListFragment.class);
-                startActivity(intent);
+                Intent intent2 = new Intent(getActivity(),ListFragment.class);
+                startActivity(intent2);
             }
         });
         btnlogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),signup.class);
-                startActivity(intent);
+                Intent intent3 = new Intent(getActivity(),signup.class);
+                startActivity(intent3);
             }
         });
         btnlogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),MainActivity.class);
-                startActivity(intent);
+                Intent intent4 = new Intent(getActivity(),MainActivity.class);
+                startActivity(intent4);
             }
         });
         return view;
